@@ -19,11 +19,11 @@ def build_parser():
     parser.add_argument('--in-path', type=str,
                         dest='in_path', help='in video path',
                         metavar='IN_PATH', required=True)
-    
+
     parser.add_argument('--out-path', type=str,
                         dest='out', help='path to save processed video to',
                         metavar='OUT', required=True)
-    
+
     parser.add_argument('--tmp-dir', type=str, dest='tmp_dir',
                         help='tmp dir for processing', metavar='TMP_DIR',
                         default=TMP_DIR)
@@ -85,8 +85,7 @@ def main():
         subprocess.call(" ".join(out_args), shell=True)
         print('Video at: %s' % opts.out)
         shutil.rmtree(opts.tmp_dir)
- 
+
 if __name__ == '__main__':
     main()
-
 
